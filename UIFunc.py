@@ -323,7 +323,7 @@ class UIFunc(QMainWindow, Ui_UIView, QtStyleTools):
     @Slot(str)
     def playtune(self, filename: str):
         self.player.setSource(QUrl.fromLocalFile(get_assets_path('sounds', filename)))
-        self.player.play()
+        self.player。play()
 
     def closeEvent(self, event):
         self.config.sync()
@@ -360,9 +360,9 @@ class UIFunc(QMainWindow, Ui_UIView, QtStyleTools):
 
     def new_script_path(self):
         now = datetime.datetime.now()
-        script = '%s.json5' % now.strftime('%m%d_%H%M')
+        script = '%s.json5' % now.strftime('%Y%m%d_%H%M%S')
         if script in self.scripts:
-            script = '%s.json5' % now.strftime('%m%d_%H%M%S')
+            script = '%s.json5' % now.strftime('%Y_%m_%d_%H_%M_%S')
         self.scripts.insert(0, script)
         update_script_map()
         self.choice_script.clear()
