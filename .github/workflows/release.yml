@@ -3,7 +3,7 @@
 
 name: release
 
-于:
+on:
   workflow_dispatch:
 
 permissions:
@@ -44,3 +44,4 @@ jobs:
 #          name: KeymouseGo${{ env.keymousego-version }}
 #          tag_name: ${{ env.tag_name }}
 #          files: ./artifact/KeymouseGo${{ env.keymousego-version }}-win.exe
+
