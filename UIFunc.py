@@ -255,9 +255,9 @@ class UIFunc(QMainWindow, Ui_UIView, QtStyleTools):
                         return
             # 录制事件
             if self.state == State.RECORDING:
-                if event.event_type == 'EM' and not flag_multiplemonitor:
-                    tx, ty = event.action
-                    event.action = ['{0}%'.format(tx), '{0}%'.format(ty)]
+                #if event.event_type == 'EM' and not flag_multiplemonitor:
+                    #tx, ty = event.action
+                    #event.action = ['{0}%'.format(tx), '{0}%'.format(ty)]
                 event_dict = event.__dict__
                 event_dict['type'] = 'event'
                 # PluginManager.call_record(event_dict)
