@@ -323,7 +323,7 @@ class UIFunc(QMainWindow, Ui_UIView, QtStyleTools):
     @Slot(str)
     def playtune(self, filename: str):
         self.player.setSource(QUrl.fromLocalFile(get_assets_path('sounds', filename)))
-        self.player。play()
+        self.player.play()
 
     def closeEvent(self, event):
         self.config.sync()
