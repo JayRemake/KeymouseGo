@@ -39,8 +39,8 @@ logger.remove()
 if sys.stdout is not None:
     logger.add(sys.stdout, backtrace=True, diagnose=True,
                level='DEBUG')
-logger.add(to_abs_path('logs', '{time}.log'), rotation='20MB', backtrace=True, diagnose=True,
-           level='INFO')
+#logger.add(to_abs_path('logs', '{time}.log'), rotation='20MB', backtrace=True, diagnose=True,
+           #level='INFO')
 
 
 def get_assets_path(*paths):
