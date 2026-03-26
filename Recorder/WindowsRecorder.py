@@ -51,7 +51,7 @@ def get_mouse_event(event):
         action_type += ' up' if event.Wheel == 1 else ' down'
     elif action_type in globalv.swapmousemap and swapmousebuttons:
         action_type = globalv.swapmousemap[action_type]
-    all_messages = ('mouse left down', 'mouse left up', 'mouse right down', 'mouse right up', 'mouse move',
+    all_messages = ('mouse left down', 'mouse left up', 'mouse right down', 'mouse right up',
                     'mouse middle down', 'mouse middle up', 'mouse wheel up', 'mouse wheel down',
                     'mouse x1 down', 'mouse x1 up', 'mouse x2 down', 'mouse x2 up'
                     )
