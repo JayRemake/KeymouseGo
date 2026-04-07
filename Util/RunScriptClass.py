@@ -86,14 +86,14 @@ class RunScriptClass(QThread, RunScriptMeta):
             return
 
         self.btnSignal.emit(False)
-        self.playtuneSignal.emit('start.wav')
+        #self.playtuneSignal.emit('start.wav')
         try:
             self.run_script_from_path(self.script_path)
         except Exception as e:
             logger.error(e)
             self.logSignal.emit('An error occurred during execution! Please check logs!')
         self.statusSignal.emit(True)
-        self.playtuneSignal.emit('end.wav')
+        #self.playtuneSignal.emit('end.wav')
 
     @logger.catch
     def run_script_from_path(self, script_path: str):
